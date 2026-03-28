@@ -1,5 +1,6 @@
 mod p00001_two_sum;
 mod p00007_reverse_integer;
+mod p00008_string_to_integer_atoi;
 mod p00026_remove_duplicates_from_sorted_array;
 mod p00027_remove_element;
 mod p00066_plus_one;
@@ -26,6 +27,11 @@ fn main() {
         Some("7")=> {
             let x: i32 = -2147483648;
             let result:i32 = p00007_reverse_integer::reverse(x);
+            println!("{}", result);
+        }
+        Some("8")=> {
+            let s: String = "   -042".to_string();
+            let result:i32 = p00008_string_to_integer_atoi::my_atoi(s);
             println!("{}", result);
         }
         Some("26")=> {
