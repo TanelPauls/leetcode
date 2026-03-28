@@ -1,4 +1,5 @@
 mod p00001_two_sum;
+mod p00007_reverse_integer;
 mod p00026_remove_duplicates_from_sorted_array;
 mod p00027_remove_element;
 mod p00066_plus_one;
@@ -8,6 +9,7 @@ mod p00167_two_sum_2_input_array_is_sorted;
 mod p00190_reverse_bits;
 mod p00191_number_of_1_bits;
 mod p00338_counting_bits;
+mod p02119_a_number_after_a_double_reversal;
 
 use std::env;
 
@@ -20,6 +22,11 @@ fn main() {
             let target: i32 = 9;
             let result = p00001_two_sum::two_sum(nums, target);
             println!("{:?}", result);
+        }
+        Some("7")=> {
+            let x: i32 = -2147483648;
+            let result:i32 = p00007_reverse_integer::reverse(x);
+            println!("{}", result);
         }
         Some("26")=> {
             let mut nums = vec![1,1,2,2,2,5,5];
@@ -61,6 +68,11 @@ fn main() {
         Some("338")=> {
             let result: Vec<i32> = p00338_counting_bits::count_bits(5);
             println!("{:?}", result);
+        }
+        Some("2119")=> {
+            let num: i32 = 1800;
+            let result: bool = p02119_a_number_after_a_double_reversal::is_same_after_reversals(num);
+            println!("{}", result);
         }
         _ => {
             println!("Usage: cargo run -- <problem_number>");
