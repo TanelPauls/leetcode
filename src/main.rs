@@ -1,11 +1,13 @@
 mod p00001_two_sum;
 mod p00007_reverse_integer;
 mod p00008_string_to_integer_atoi;
+mod p00011_container_with_most_water;
 mod p00026_remove_duplicates_from_sorted_array;
 mod p00027_remove_element;
 mod p00066_plus_one;
 mod p00067_add_binary;
 mod p00069_sqrt;
+mod p00088_merge_sorted_array;
 mod p00167_two_sum_2_input_array_is_sorted;
 mod p00190_reverse_bits;
 mod p00191_number_of_1_bits;
@@ -34,6 +36,11 @@ fn main() {
             let result:i32 = p00008_string_to_integer_atoi::my_atoi(s);
             println!("{}", result);
         }
+        Some("11")=> {
+            let height: Vec<i32> = vec![1,8,6,2,5,4,8,3,7];
+            let result:i32 = p00011_container_with_most_water::max_area(height);
+            println!("{}", result);
+        }
         Some("26")=> {
             let mut nums = vec![1,1,2,2,2,5,5];
             let result = p00026_remove_duplicates_from_sorted_array::remove_duplicates(&mut nums);
@@ -56,6 +63,14 @@ fn main() {
         Some("69")=> {
             let result: i32 = p00069_sqrt::my_sqrt(2147395599);
             println!("{}", result);
+        }
+        Some("88")=> {
+            let mut nums1 = vec![1,2,3,0,0,0];
+            let m:i32=3;
+            let mut nums2 = vec![2,4,6];
+            let n:i32=3;
+            p00088_merge_sorted_array::merge(&mut nums1, m, &mut nums2, n);
+            println!("{:?}", nums1);
         }
         Some("167")=> {
             let numbers = vec![2,7,11,15];
