@@ -1,6 +1,7 @@
 mod p00001_two_sum;
 mod p00007_reverse_integer;
 mod p00008_string_to_integer_atoi;
+mod p00009_palindrome;
 mod p00011_container_with_most_water;
 mod p00026_remove_duplicates_from_sorted_array;
 mod p00027_remove_element;
@@ -34,6 +35,11 @@ fn main() {
         Some("8")=> {
             let s: String = "   -042".to_string();
             let result:i32 = p00008_string_to_integer_atoi::my_atoi(s);
+            println!("{}", result);
+        }
+        Some("9")=> {
+            let n = 1240421;
+            let result:bool = p00009_palindrome::is_palindrome(n);
             println!("{}", result);
         }
         Some("11")=> {
