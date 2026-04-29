@@ -3,6 +3,7 @@ mod p00007_reverse_integer;
 mod p00008_string_to_integer_atoi;
 mod p00009_palindrome;
 mod p00011_container_with_most_water;
+mod p00020_valid_parentheses;
 mod p00026_remove_duplicates_from_sorted_array;
 mod p00027_remove_element;
 mod p00066_plus_one;
@@ -45,6 +46,11 @@ fn main() {
         Some("11")=> {
             let height: Vec<i32> = vec![1,8,6,2,5,4,8,3,7];
             let result:i32 = p00011_container_with_most_water::max_area(height);
+            println!("{}", result);
+        }
+        Some("20")=> {
+            let s = String::from("(()()()((())))");
+            let result:bool = p00020_valid_parentheses::is_valid(s);
             println!("{}", result);
         }
         Some("26")=> {
