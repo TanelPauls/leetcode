@@ -6,6 +6,7 @@ mod p00011_container_with_most_water;
 mod p00020_valid_parentheses;
 mod p00026_remove_duplicates_from_sorted_array;
 mod p00027_remove_element;
+mod p00038_count_and_say;
 mod p00066_plus_one;
 mod p00067_add_binary;
 mod p00069_sqrt;
@@ -62,6 +63,11 @@ fn main() {
             let mut nums = vec![1,1,5,2,2,5,5];
             let val: i32 = 5;
             let result = p00027_remove_element::remove_element(&mut nums, val);
+            println!("{}", result);
+        }
+        Some("38")=> {
+            let n: i32 = 10;
+            let result: String = p00038_count_and_say::count_and_say(n);
             println!("{}", result);
         }
         Some("66") => {
